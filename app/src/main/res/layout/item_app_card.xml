@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Card Container: Rounded 18dp with hardware outline clipping -->
+    <FrameLayout
+        android:id="@+id/cardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_card_height"
+        android:background="@drawable/bg_card_dark"
+        android:clipToOutline="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true">
+
+        <!-- 16:9 Leanback Banner -->
+        <ImageView
+            android:id="@+id/ivAppBanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            tools:src="@drawable/ic_launcher_foreground" />
+
+        <!-- Fallback square app icon -->
+        <ImageView
+            android:id="@+id/ivAppIcon"
+            android:layout_width="@dimen/app_card_fallback_icon_size"
+            android:layout_height="@dimen/app_card_fallback_icon_size"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:contentDescription="@null" />
+
+        <!-- Glowing white focus border overlay -->
+        <View
+            android:id="@+id/viewFocusBorder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_card_focus_border"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</FrameLayout>

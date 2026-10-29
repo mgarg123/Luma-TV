@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Luma</string>
+    <string name="brand_title">Luma</string>
+    <string name="section_favourites">Your Favourites</string>
+    <string name="section_all_apps">All Apps</string>
+    <string name="inputs">Inputs</string>
+    <string name="action_open_inputs">TV Inputs</string>
+    <string name="settings">Settings</string>
+    <string name="action_open_settings">Open TV Settings</string>
+    <string name="hint_navigation">D-pad: Navigate  •  OK: Open  •  Long OK: Toggle Favourite</string>
+    <string name="featured_title_morning">Good morning</string>
+    <string name="featured_title_afternoon">Good afternoon</string>
+    <string name="featured_title_evening">Good evening</string>
+    <string name="featured_title_night">Good night</string>
+    <string name="featured_subtitle_format">Xiaomi Mi TV 4A  •  %1$d Apps Available</string>
+    <string name="no_apps_found">No launchable applications found</string>
+    <string name="added_to_favorites">Added to Favourites</string>
+    <string name="removed_from_favorites">Removed from Favourites</string>
+
+    <!-- Apple TV header -->
+    <string name="greeting_morning">GOOD MORNING</string>
+    <string name="greeting_afternoon">GOOD AFTERNOON</string>
+    <string name="greeting_evening">GOOD EVENING</string>
+    <string name="greeting_night">GOOD NIGHT</string>
+    <string name="pill_inputs">Inputs</string>
+    <string name="pill_wifi">WiFi</string>
+    <string name="pill_settings">Settings</string>
+</resources>

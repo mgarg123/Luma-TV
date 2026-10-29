@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Ambient radial spotlight glow (updates dynamically per focused app) -->
+    <View
+        android:id="@+id/heroBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Vertically scrollable launcher view -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/rootScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/tv_overscan_horizontal"
+            android:paddingEnd="@dimen/tv_overscan_horizontal"
+            android:paddingTop="@dimen/tv_overscan_vertical"
+            android:paddingBottom="48dp">
+
+            <!-- ═══════════ HEADER ROW ═══════════ -->
+            <RelativeLayout
+                android:id="@+id/headerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_height"
+                android:gravity="center_vertical">
+
+                <!-- Left side: Greeting + Time + Date -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <!-- GOOD AFTERNOON -->
+                    <TextView
+                        android:id="@+id/tvGreeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/header_greeting_size"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.08"
+                        android:textAllCaps="true"
+                        tools:text="GOOD AFTERNOON" />
+
+                    <!-- 1:13 PM  |  SATURDAY 17 OCTOBER -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="2dp">
+
+                        <TextClock
+                            android:id="@+id/textClock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:format12Hour="h:mm a"
+                            android:format24Hour="HH:mm"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/header_time_size"
+                            android:fontFamily="sans-serif-medium" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  |  "
+                            android:textColor="@color/text_muted"
+                            android:textSize="@dimen/header_date_size"
+                            android:fontFamily="sans-serif" />
+
+                        <TextClock
+                            android:id="@+id/textDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:format12Hour="EEEE d MMMM"
+                            android:format24Hour="EEEE d MMMM"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/header_date_size"
+                            android:fontFamily="sans-serif"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Right side: Pill buttons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Inputs pill -->
+                    <LinearLayout
+                        android:id="@+id/btnInputs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/pill_height"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/pill_padding_horizontal"
+                        android:paddingEnd="@dimen/pill_padding_horizontal"
+                        android:layout_marginEnd="@dimen/pill_spacing"
+                        android:background="@drawable/bg_pill_button"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:clickable="true"
+                        android:contentDescription="@string/action_open_inputs">
+
+                        <ImageView
+                            android:layout_width="@dimen/pill_icon_size"
+                            android:layout_height="@dimen/pill_icon_size"
+                            android:src="@drawable/ic_tv_input"
+                            android:tint="@color/pill_text"
+                            android:layout_marginEnd="6dp"
+                            android:contentDescription="@null" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pill_inputs"
+                            android:textColor="@color/pill_text"
+                            android:textSize="@dimen/pill_text_size"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <!-- WiFi pill -->
+                    <LinearLayout
+                        android:id="@+id/btnWifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/pill_height"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/pill_padding_horizontal"
+                        android:paddingEnd="@dimen/pill_padding_horizontal"
+                        android:layout_marginEnd="@dimen/pill_spacing"
+                        android:background="@drawable/bg_pill_button"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:clickable="true">
+
+                        <ImageView
+                            android:layout_width="@dimen/pill_icon_size"
+                            android:layout_height="@dimen/pill_icon_size"
+                            android:src="@drawable/ic_wifi"
+                            android:layout_marginEnd="6dp"
+                            android:contentDescription="@null" />
+
+                        <TextView
+                            android:id="@+id/tvWifiName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pill_wifi"
+                            android:textColor="@color/pill_text"
+                            android:textSize="@dimen/pill_text_size"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <!-- Settings pill -->
+                    <LinearLayout
+                        android:id="@+id/btnSettings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/pill_height"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/pill_padding_horizontal"
+                        android:paddingEnd="@dimen/pill_padding_horizontal"
+                        android:background="@drawable/bg_pill_button"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:clickable="true"
+                        android:contentDescription="@string/action_open_settings">
+
+                        <ImageView
+                            android:layout_width="@dimen/pill_icon_size"
+                            android:layout_height="@dimen/pill_icon_size"
+                            android:src="@drawable/ic_settings"
+                            android:tint="@color/pill_text"
+                            android:layout_marginEnd="6dp"
+                            android:contentDescription="@null" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pill_settings"
+                            android:textColor="@color/pill_text"
+                            android:textSize="@dimen/pill_text_size"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- ═══════════ SPACER TO HERO POSITION ═══════════ -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="115dp" />
+
+            <!-- ═══════════ FOCUSED APP NAME ═══════════ -->
+            <TextView
+                android:id="@+id/tvHeroAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="@dimen/hero_app_name_margin_bottom"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/hero_app_name_size"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="-0.01"
+                tools:text="Netflix" />
+
+            <!-- ═══════════ 4-COLUMN VERTICAL GRID OF ALL APPS ═══════════ -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAppsGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:focusable="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

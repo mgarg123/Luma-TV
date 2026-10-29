@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cinematic Dark Base -->
+    <color name="bg_dark">#08090C</color>
+    <color name="surface">#181B24</color>
+    <color name="surface_card">#1C202A</color>
+    <color name="card_white">#FFFFFF</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#F4F5F8</color>
+    <color name="text_secondary">#9E9EA4</color>
+    <color name="text_muted">#686E7D</color>
+    <color name="text_accent">#AFC3FF</color>
+
+    <!-- Header Pills (Translucent with subtle glass border) -->
+    <color name="pill_bg">#26FFFFFF</color>
+    <color name="pill_bg_focused">#50FFFFFF</color>
+    <color name="pill_text">#EBEBF0</color>
+
+    <!-- Card Focus Glow -->
+    <color name="card_focus_border">#FFFFFFFF</color>
+
+    <!-- Preserved for compatibility -->
+    <color name="surface_elevated">#292E39</color>
+    <color name="surface_card_focused">#2C3240</color>
+    <color name="accent">#AFC3FF</color>
+    <color name="accent_muted">#465880</color>
+    <color name="accent_glow">#33AFC3FF</color>
+    <color name="focus_stroke">#AFC3FF</color>
+    <color name="overlay_panel">#1D222B</color>
+    <color name="badge_bg">#252A36</color>
+    <color name="star_active">#FFD54F</color>
+    <color name="card_frost">#33FFFFFF</color>
+    <color name="card_frost_focused">#55FFFFFF</color>
+    <color name="card_glow_border">#88FFFFFF</color>
+    <color name="hero_gradient_start">#B80A15</color>
+    <color name="hero_gradient_end">#08090C</color>
+</resources>

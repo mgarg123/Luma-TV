@@ -1,0 +1,60 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Soft ambient background glow -->
+    <path
+        android:pathData="M54,20 A30,30 0 1 1 53.9,20 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="54"
+                android:centerY="48"
+                android:gradientRadius="32"
+                android:startColor="#60E50914"
+                android:endColor="#00000000" />
+        </aapt:attr>
+    </path>
+
+    <!-- TV Display Bezel -->
+    <path
+        android:pathData="M26,30 h56 a5,5 0 0 1 5,5 v34 a5,5 0 0 1 -5,5 h-56 a5,5 0 0 1 -5,-5 v-34 a5,5 0 0 1 5,-5 z"
+        android:fillColor="#222834"
+        android:strokeColor="#384252"
+        android:strokeWidth="1.5" />
+
+    <!-- TV Screen: Apple TV style luminous ambient display -->
+    <path
+        android:pathData="M28,32 h52 a3,3 0 0 1 3,3 v30 a3,3 0 0 1 -3,3 h-52 a3,3 0 0 1 -3,-3 v-30 a3,3 0 0 1 3,-3 z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="28"
+                android:startY="32"
+                android:endX="80"
+                android:endY="68"
+                android:startColor="#E50914"
+                android:centerColor="#7C3AED"
+                android:endColor="#00A8E1" />
+        </aapt:attr>
+    </path>
+
+    <!-- Screen Glass Highlight (top-diagonal soft reflection) -->
+    <path
+        android:pathData="M28,32 h52 a3,3 0 0 1 3,3 v12 L25,47 v-12 a3,3 0 0 1 3,-3 z"
+        android:fillColor="#25FFFFFF" />
+
+    <!-- TV Stand Neck -->
+    <path
+        android:pathData="M52.5,74 h3 v5 h-3 z"
+        android:fillColor="#4A5568" />
+
+    <!-- TV Stand Base (sleek metallic capsule) -->
+    <path
+        android:pathData="M43,79 h22 a1.5,1.5 0 0 1 1.5,1.5 v0 a1.5,1.5 0 0 1 -1.5,1.5 h-22 a1.5,1.5 0 0 1 -1.5,-1.5 v0 a1.5,1.5 0 0 1 1.5,-1.5 z"
+        android:fillColor="#8892A0" />
+
+</vector>

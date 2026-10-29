@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Overscan Safe Margins for 1366x768 TV -->
+    <dimen name="tv_overscan_horizontal">48dp</dimen>
+    <dimen name="tv_overscan_vertical">28dp</dimen>
+
+    <!-- Header Typography -->
+    <dimen name="header_greeting_size">12sp</dimen>
+    <dimen name="header_time_size">28sp</dimen>
+    <dimen name="header_date_size">13sp</dimen>
+    <dimen name="header_height">54dp</dimen>
+
+    <!-- Hero Banner Title -->
+    <dimen name="hero_app_name_size">32sp</dimen>
+    <dimen name="hero_app_name_margin_bottom">12dp</dimen>
+
+    <!-- Pill Buttons -->
+    <dimen name="pill_corner_radius">18dp</dimen>
+    <dimen name="pill_height">36dp</dimen>
+    <dimen name="pill_icon_size">16dp</dimen>
+    <dimen name="pill_text_size">12.5sp</dimen>
+    <dimen name="pill_padding_horizontal">14dp</dimen>
+    <dimen name="pill_spacing">10dp</dimen>
+
+    <!-- 4-Column Grid App Cards -->
+    <dimen name="app_card_height">124dp</dimen>
+    <dimen name="app_card_corner_radius">18dp</dimen>
+    <dimen name="app_card_fallback_icon_size">56dp</dimen>
+    <dimen name="card_focus_stroke_width">3.5dp</dimen>
+
+    <!-- Legacy dimens preserved to prevent build breakage -->
+    <dimen name="app_card_width">216dp</dimen>
+    <dimen name="app_card_icon_size">64dp</dimen>
+    <dimen name="app_card_spacing">14dp</dimen>
+    <dimen name="app_card_small_width">170dp</dimen>
+    <dimen name="app_card_small_height">105dp</dimen>
+    <dimen name="app_card_small_icon_size">52dp</dimen>
+    <dimen name="card_focus_elevation">12dp</dimen>
+    <dimen name="text_size_brand">24sp</dimen>
+    <dimen name="text_size_header_clock">20sp</dimen>
+    <dimen name="text_size_section_title">20sp</dimen>
+    <dimen name="text_size_featured_title">24sp</dimen>
+    <dimen name="text_size_featured_subtitle">13sp</dimen>
+    <dimen name="text_size_app_title">14sp</dimen>
+    <dimen name="text_size_app_subtitle">11sp</dimen>
+    <dimen name="text_size_hint">12sp</dimen>
+    <dimen name="tile_corner_radius">14dp</dimen>
+    <dimen name="tile_focus_stroke_width">2.5dp</dimen>
+    <dimen name="app_icon_size">52dp</dimen>
+    <dimen name="app_tile_min_height">130dp</dimen>
+    <dimen name="app_tile_spacing">16dp</dimen>
+    <dimen name="featured_panel_height">72dp</dimen>
+    <dimen name="featured_corner_radius">16dp</dimen>
+</resources>
