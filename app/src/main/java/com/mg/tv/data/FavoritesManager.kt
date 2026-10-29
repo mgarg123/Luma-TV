@@ -84,3 +84,4 @@ class FavoritesManager(context: Context) {
         prefs.edit().putStringSet(KEY_FAVORITES, current).apply()
     }
 }
+

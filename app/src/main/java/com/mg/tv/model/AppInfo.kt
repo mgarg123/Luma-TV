@@ -11,3 +11,4 @@ data class AppInfo(
     val isLeanback: Boolean = true,
     var isFavorite: Boolean = false
 )
+
